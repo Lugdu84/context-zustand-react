@@ -4,6 +4,8 @@ import DialogProvider, {
 	DialogTrigger,
 	useDialog,
 } from './context/DialogProvider';
+import Section from './components/Section';
+import Heading from './components/Heading';
 
 const CounterContext = createContext({
 	count: 0,
@@ -20,6 +22,24 @@ function App() {
 					<DialogClose />
 				</DialogContent>
 			</DialogProvider>
+			<Section>
+				<Heading>Titre</Heading>
+				<Section>
+					<Heading>Section</Heading>
+					<Heading>Section</Heading>
+					<Heading>Section</Heading>
+					<Section>
+						<Heading>Sous-section</Heading>
+						<Heading>Sous-section</Heading>
+						<Heading>Sous-section</Heading>
+						<Section>
+							<Heading>Sous-sous-section</Heading>
+							<Heading>Sous-sous-section</Heading>
+							<Heading>Sous-sous-section</Heading>
+						</Section>
+					</Section>
+				</Section>
+			</Section>
 		</div>
 	);
 }
